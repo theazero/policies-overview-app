@@ -2,17 +2,9 @@
   --helvetica: helvetica, 'Arial', sans-serif;
 }
 
-#root {
-  font-family: var(--helvetica);
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  min-height: 100svh;
-}
-
 body {
   margin: 0;
+  font-family: var(--helvetica);
 }
 
 h1,
