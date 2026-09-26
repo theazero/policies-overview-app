@@ -1,0 +1,39 @@
+:root {
+  /* Färger */
+  --color-ink: #14143e;
+  --color-muted: #565675;
+  --color-surface: #ebeffa;
+  --color-border: #d7def4;
+  --color-white: #fff;
+  --color-heading: #080808;
+  --color-primary-hover: #303061;
+  --color-focus: #4269bb;
+  --color-danger: #ad202d;
+  --color-danger-surface: #ffe5e6;
+  --color-danger-border: #edc6c9;
+  --color-backdrop: rgb(0 0 0 / 45%);
+
+  /* Typografi */
+  --font-family: Helvetica, Arial, sans-serif;
+  --font-size-small: .875rem;
+  --font-size-heading: 1.25rem;
+  --font-weight-semibold: 600;
+
+  /* Gemensamma avstånd */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Rundningar och tryckytor */
+  --radius-small: 3px;
+  --radius-card: 6px;
+  --radius-large: 20px;
+  --control-height-mobile: 48px;
+}

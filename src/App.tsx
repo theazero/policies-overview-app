@@ -6,8 +6,8 @@ import Pagination from './components/Pagination'
 import PolicyList from './components/PolicyList'
 import { usePolicies } from './hooks/usePolicies'
 import type { PolicyFilters } from './types'
-import './App.css'
-import './components.css'
+import './styles/overview.css'
+import './styles/components.css'
 
 const PAGE_SIZE = 5
 
