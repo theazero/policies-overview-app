@@ -1,4 +1,6 @@
 import { useRef, useState } from 'react'
+import Button from './components/Button'
+import ErrorState from './components/ErrorState'
 import FilterPanel from './components/FilterPanel'
 import Pagination from './components/Pagination'
 import PolicyList from './components/PolicyList'
@@ -35,17 +37,14 @@ function App() {
       <h1>Mina försäkringar</h1>
       {loading ? <p className="overview__message" role="status">Hämtar dina försäkringar…</p>
         : error ? (
-          <div className="overview__message" role="alert">
-            <p>Det gick inte att hämta dina försäkringar. Försök igen.</p>
-            <button type="button" className="button" onClick={retry}>Försök igen</button>
-          </div>
+          <ErrorState message="Det gick inte att hämta dina försäkringar. Försök igen." onRetry={retry} />
         ) : (
           <div className={`overview__layout${filterOpen ? ' overview__layout--with-filters' : ''}`}>
             <div className="overview__toolbar">
               <Pagination page={page} pageSize={PAGE_SIZE} total={filteredPolicies.length} onPageChange={setPage} />
-              <button ref={filterButton} type="button" className="button" aria-expanded={filterOpen}
+              <Button ref={filterButton} aria-expanded={filterOpen}
                 aria-controls={filterOpen ? 'filter-panel' : undefined}
-                onClick={() => setFilterOpen(current => !current)}>Filtrera</button>
+                onClick={() => setFilterOpen(current => !current)}>Filtrera</Button>
             </div>
             {filterOpen && <FilterPanel products={products} appliedFilters={filters}
               onClose={closeFilters} onApply={nextFilters => {
