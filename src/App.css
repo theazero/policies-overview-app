@@ -1,8 +1,66 @@
 /* Sidans layout */
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
   min-height: 100svh;
+}
+
+.overview {
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.overview h1 {
+  margin: 0 0 64px;
+  color: #080808;
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.overview__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px 32px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.overview__layout--with-filters {
+  grid-template-columns: minmax(0, 1fr) 280px;
+  max-width: none;
+}
+
+.overview__toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  grid-column: 1;
+}
+
+.overview__results {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.overview__layout > .filter-panel {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: start;
+  margin-top: 44px;
+}
+
+.overview__message {
+  text-align: center;
+  padding: 24px;
+}
+
+@media (max-width: 760px) {
+  .overview { padding: 24px 16px 40px; }
+  .overview h1 { margin-bottom: 32px; }
+  .overview__layout--with-filters { grid-template-columns: minmax(0, 1fr); }
+  .overview__layout > .filter-panel {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 0;
+  }
 }
